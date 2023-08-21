@@ -75,7 +75,7 @@ body {
   font-style: 2.8rem;
   color: antiquewhite;
   cursor: pointer;
-  /* display: none;   */
+  display: none;  
 }
 
 /* breakpoint */
