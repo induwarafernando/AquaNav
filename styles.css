@@ -12,18 +12,29 @@ body {
   background: url('3D_Animation_Style_sunrising_from_horizon_beach_aesthetic_view_1.jpg') no-repeat center center fixed;
   background-size: cover;
 }
-header{
+.header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1.3rem 10%;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(50px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+}
+.header::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  z-index: -1;
+
+
 }
 
 .logo{
@@ -39,4 +50,45 @@ header{
     text-decoration: none;
     font-weight: 500;
 
+}
+
+
+.icons{
+  position: absolute;
+  right: 5%;
+  font-style: 2.8rem;
+  color: antiquewhite;
+  cursor: pointer;
+  display: none;  
+}
+
+/* breakpoint */
+@media (max-width:992px){
+  .header{
+    padding: 1.3rem 5%;
+  }
+}
+@media (max-width: 768px){
+  .icons{
+    display: inline-flex;
+  }
+}
+
+.navbar{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 17.7rem;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar a {
+  display: block;
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+  text-align: center;
 }
