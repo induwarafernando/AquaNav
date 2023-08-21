@@ -30,7 +30,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(60, 125, 244, 0.757);
   backdrop-filter: blur(50px);
   z-index: -1;
 }
@@ -42,19 +42,101 @@ body {
   left:-100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg,transparent,rgba(255,255,255,4),transparent);
-  transition: 0.29s;
+  background: linear-gradient(90deg,transparent,rgba(255, 255, 255, 0),transparent);
+  transition: 0.8s;
   z-index: -1;
 }
 .header:hover::after{
   left: 100%;
 }
 
+
+/* test */
+nav a button {
+  background-color: rgba(8, 73, 101, 0.793);
+  --color: #ffffff;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2em;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color .5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: var(--color);
+ }
+ 
+ nav a button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+ }
+ 
+ nav a button:hover {
+  color: #020739;
+ }
+ 
+ nav a button:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+ }
+ 
+ nav a button:hover:before {
+  top: -30px;
+  left: -30px;
+ }
+ 
+ nav a button:active:before {
+  background: #0c67a3;
+  transition: background 0s;
+ }
+/* test */
+/* 
+nav a button{
+  z-index: 1000;
+  background-color: #04668d;
+  width: 120px;
+  padding: 3px 3px 3px 3px;
+  margin: 9px 9px 9px 9px;
+  text-align: center;
+  border-radius: 5px;
+  color: rgb(252, 251, 255);
+  border: 2px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 400;
+}
+  nav a button:hover{
+      background: rgba(36, 40, 248, 0.801);
+      transition: 0.8s;
+      letter-spacing: 3px;
+      color: rgb(207, 243, 0);
+  } */
+  
+
 .logo{
     cursor: pointer;
     color: aliceblue;
     text-decoration: none;
     font-weight: 700;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-left:40px;
+    align-items: center;
 }
 
 .navbar a {
@@ -106,17 +188,20 @@ body {
   }
   
   .navbar{
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
+    margin: 0;
     width: 100%;
-    height: 0;
-    background: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    background: rgba(0, 0, 0, 0.181);
     backdrop-filter: blur(50px);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
     transition: 0.3s;
   }
-  
+
+
   #check:checked~.navbar {
     height: 17.7rem;
   }
