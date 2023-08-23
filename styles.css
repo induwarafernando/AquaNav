@@ -30,7 +30,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(60, 125, 244, 0.757);
+  background: rgba(33, 30, 202, 0.853);
   backdrop-filter: blur(50px);
   z-index: -1;
 }
@@ -203,7 +203,7 @@ nav a button{
 
 
   #check:checked~.navbar {
-    height: 17.7rem;
+    height: 25rem;
   }
 
 
